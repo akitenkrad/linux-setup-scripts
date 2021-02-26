@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python:
+    container_name: 'python3.8'
+    image: python:3.8
+    user: root
+    volumes:
+      - ./workplace:/workplace
+    environment:
+      TZ: Asia/Tokyo
+    tty: true
