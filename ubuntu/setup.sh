@@ -64,10 +64,10 @@ EOF
 systemctl restart polkit
 
 # INSTALL npm
-apt install -y nodejs npm
+apt install -y node-gyp nodejs-dev libssl1.0-dev nodejs npm
 npm install -g n
 n stable
-apt --purge remove nodejs npm
+apt --purge -y remove nodejs npm
 exec $SHELL -l
 
 # INSTALL aws-cli
