@@ -75,10 +75,9 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 bash aws/install
 
-# SETUP Anaconda
-apt-get install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
-curl -OL https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-# bash Anaconda3-2020.02-Linux-x86_64.sh
+# SETUP Miniconda
+curl -OL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# bash Miniconda3-latest-Linux-x86_64.sh
 
 
 # CONFIGURE GIT
@@ -86,5 +85,5 @@ git config --global core.editor vim
 echo 'CONFIGURE git user.name >> "git config --global user.name <USER NAME>"'
 echo 'CONFIGURE git user.email >> "git config --global user.email <USER EMAIL>"'
 
-echo 'run > bash Anaconda3-2020.02-Linux-x86_64.sh'
+echo 'run > bash Miniconda3-latest-Linux-x86_64.sh'
 

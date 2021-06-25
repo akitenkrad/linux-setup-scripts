@@ -1,12 +1,10 @@
 # How to use
 
-run `setup.sh`
+runt the `setup.sh`
 
 # Contents of the setup
 
-
 # Change docker image directory
-
 edit `/lib/systemd/system/docker.service`
 
 ```
@@ -39,9 +37,8 @@ ExecStart=/usr/bin/docker daemon -H fd://
 ExecStart=/usr/bin/docker daemon -h fd:// -g /path/to/dir/to/save/images  
 
 reload daemon and restart docker  
+
 ```
 $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```
-
-
