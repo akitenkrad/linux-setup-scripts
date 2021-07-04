@@ -63,13 +63,6 @@ ResultActive=yes
 EOF
 systemctl restart polkit
 
-# INSTALL npm
-apt install -y nodejs npm
-npm install -g n
-n stable
-apt --purge -y remove nodejs npm
-exec $SHELL -l
-
 # INSTALL aws-cli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
@@ -79,11 +72,18 @@ bash aws/install
 curl -OL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 # bash Miniconda3-latest-Linux-x86_64.sh
 
-
 # CONFIGURE GIT
 git config --global core.editor vim
+
+# INSTALL npm
+apt install -y nodejs npm
+npm install -g n
+n stable
+apt --purge -y remove nodejs npm
+
 echo 'CONFIGURE git user.name >> "git config --global user.name <USER NAME>"'
 echo 'CONFIGURE git user.email >> "git config --global user.email <USER EMAIL>"'
 
 echo 'run > Miniconda3-latest-Linux-x86_64.sh'
 
+exec $SHELL -l
