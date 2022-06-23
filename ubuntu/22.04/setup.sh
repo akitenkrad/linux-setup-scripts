@@ -84,6 +84,17 @@ python -m pip install pipenv
 echo "export SHELL=/bin/bash" >> /home/ubuntu/.bashrc
 python -m pip install git+https://github.com/akitenkrad/tools
 
+# INSTALL Chrome
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo apt update -y
+sudo apt-get install google-chrome-stable
+
+# INSTALL VS Code
+curl -OL https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+sudo apt install ./code_1.68.1-1655263094_amd64.deb
+rm code_1.68.1-1655263094_amd64.deb
+
 # CONFIGURE GIT
 git config --global core.editor vim
 
