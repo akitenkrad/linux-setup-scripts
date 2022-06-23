@@ -2,6 +2,11 @@
 
 set -eu
 
+cat << 'EOF' > /etc/needrestart/conf.d/99_restart.conf
+$nrconf{kernelhints} = '0';
+$nrconf{restart} = 'a';
+EOF
+
 apt update -y
 apt upgrade -y
 
