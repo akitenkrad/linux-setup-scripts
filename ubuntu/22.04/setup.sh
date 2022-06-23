@@ -91,9 +91,9 @@ sudo apt update -y
 sudo apt-get install google-chrome-stable
 
 # INSTALL VS Code
-curl -OL https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-sudo apt install ./code_1.68.1-1655263094_amd64.deb
-rm code_1.68.1-1655263094_amd64.deb
+curl -L https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 -o code.deb
+sudo apt install -y ./code.deb
+rm code.deb
 
 # CONFIGURE GIT
 git config --global core.editor vim
