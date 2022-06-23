@@ -74,6 +74,10 @@ unzip awscliv2.zip
 bash aws/install
 
 # INSTALL Python
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update -y
 apt -y install python3.9 python3.9-dev python3.9-venv python3-pip && \
 update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1
 python -m pip install pipenv
